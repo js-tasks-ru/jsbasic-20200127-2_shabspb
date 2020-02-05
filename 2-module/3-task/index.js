@@ -1,5 +1,16 @@
 let calculator = {
-  // ваш код
+  valueA: '',
+  valueB: '',
+  read(a, b) {
+    this.valueA = a;
+    this.valueB = b;
+  },
+  sum() {
+    return this.valueA + this.valueB;
+  },
+  mul() {
+    return this.valueA * this.valueB;
+  },
 };
 
 // НЕ УДАЛЯТЬ СТРОКУ, НУЖНА ДЛЯ ПРОВЕРКИ
