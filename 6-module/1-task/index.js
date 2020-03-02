@@ -45,7 +45,7 @@ class ClearedTable {
     this.el.addEventListener('click', (event) => { // вешаю обработчик событий на table со стрелочной функцией (иначе теряется контекст)
       if (event.target.tagName === 'A') { // если кликнули по тегу А
         event.target.closest('tr').remove(); // нашли родителя тега А и удалили его
-        let id = +event.target.getAttribute('data-user-id'); // получили элемент в атрибутом 'data-user-id' и записали его в переменную id
+        let id = +event.target.getAttribute('data-user-id'); // получили элемент с атрибутом 'data-user-id' и записали его в переменную id
         this.onRemoved(id); // вызвали метод onRemoved с аргументом id привязали удаление строки с конкретным id к этому методу)
       }
     });
